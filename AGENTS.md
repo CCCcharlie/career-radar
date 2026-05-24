@@ -22,6 +22,8 @@ There are two layers. Read `DATA_CONTRACT.md` for the full list.
 
 **THE RULE: When the user asks to customize anything (archetypes, narrative, negotiation scripts, proof points, location policy, comp targets), ALWAYS write to `modes/_profile.md` or `config/profile.yml`. NEVER edit `modes/_shared.md` for user-specific content.** This ensures system updates don't overwrite their customizations.
 
+**STRICT STABILITY RULE:** You MUST NOT automatically update or "optimize" `config/profile.yml`, `portals.yml`, or `cv.md` during job evaluations, scans, or pipeline processing. These files are user-owned. Any change to these files REQUIRES an explicit user directive in the current conversation. Subagents MUST be explicitly instructed to respect this boundary.
+
 ## Update Check
 
 On the first message of each session, run the update checker silently:
